@@ -70,6 +70,25 @@ def get_data_using_cache(base_url):
         fw.close() # Close the open file
         return CACHE_DICT[unique_ident]
 
+class Restaurant:
+    def __init__(self, name, type, address, maxprice, starrating, state, review):
+        self.name = name
+        self.type = type
+        self.address = address
+        self.maxprice = maxprice
+        self.starrating = starrating
+        self.state = state
+        self.review = review
+
+    def __str__(self):
+        return self.name
+        return self.type
+        return self.address
+        return self.maxprice
+        return self.starrating
+        return self.state
+        return self.review
+
 
 def insert_data_rest():
     conn = sqlite3.connect(DBNAME)
@@ -185,7 +204,9 @@ def get_yelp_data(state_abbr):
     insert_data_review()
     return
 
-state_list = ["SC", "SD", "TN", "TX", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"]
+state_list = ['AK','AL','AR','AS','AZ','CA','CO','CT','DC','DE','FL','GA','GU','HI','IA','ID','IL','IN','KS','KY','LA','MA','MD','ME',
+'MI','MN','MO','MP','MS','MT','NC','ND','NE','NH','NJ','NM','NV','NY','OH','OK','OR','PA','PR','RI','SC', 'SD', 'TN', 'TX', 'UT',
+'VA', 'VI', 'VT', 'WA', 'WI', 'WV', 'WY']
 def populate_db():
     for state in state_list:
         get_yelp_data(state)
@@ -309,6 +330,6 @@ def yelp_interactive_search():
 
 
 #init_database()
-get_yelp_data('SC')
+#get_yelp_data()
 #populate_db()
-#yelp_interactive_search()
+yelp_interactive_search()
