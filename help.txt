@@ -1,0 +1,16 @@
+Available Commands:
+
+1. state
+Description: Categorizes data by US state
+Options:
+'price' -- Orders data by average max. price/person of each states top 10 restaurants
+'rating' -- Orders data by average star rating of each states top 10 restaurants
+
+2. type
+Description: Categorizes data by restaurant type
+Options:
+'price' -- Orders data by average max. price/person of all types of restaurants in the US
+'rating' -- Orders data by average star rating of all types of restaurants in the US
+
+3. exit
+Description: Terminates the program
